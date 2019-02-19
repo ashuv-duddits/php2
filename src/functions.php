@@ -83,14 +83,14 @@ function task2()
     $result2 = json_decode($content, true);
     $keys1 = array_keys($result1);
     $keys2 = array_keys($result2);
-    $count = 0;
+    $countDiff = 0;
     for ($i=0; $i < count($result1); $i++) {
         if ($result1[$keys1[$i]] !== $result2[$keys2[$i]]) {
             echo "Значение ключа $keys1[$i] первого массива не равен значению ключа $keys2[$i] второго массива!<br />";
-            $count++;
+            $countDiff++;
         }
     }
-    if ($count == 0) {
+    if ($countDiff == 0) {
         echo "Массивы равны";
     }
 }
